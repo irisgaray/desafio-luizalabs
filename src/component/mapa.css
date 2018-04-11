@@ -11,3 +11,13 @@
     color: #727d8e;
     /* font-style: italic; */
 }
+
+.NotFound {
+    color: #dd3030;
+}
+
+.Iframe {
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;  
+}
