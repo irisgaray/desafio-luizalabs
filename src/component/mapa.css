@@ -1,0 +1,13 @@
+.Mapa {
+    width: 80%;
+    height: 500px;
+    border: 1px #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.Text {
+    color: #727d8e;
+    /* font-style: italic; */
+}

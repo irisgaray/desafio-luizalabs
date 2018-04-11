@@ -1,0 +1,40 @@
+.ConsultaCEP {
+  width: 80%;
+  height: 80px;
+  border: 1px #eee;
+  box-shadow: 0 1px 1px #ccc;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #ededed;
+}
+
+.Label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.Input {
+  margin: 20px;
+  width: 100px;
+  padding: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.Button {
+  color: white;
+  background-color: #5dade2;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  width: 80px;
+  border-radius: 5px 5px 5px 5px;
+  font-weight: bold;
+}
+
+/* @media (min-width: 600px) {
+  .ConsultaCEP {
+      width: 500px;
+  }
+} */
