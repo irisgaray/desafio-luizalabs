@@ -9,8 +9,7 @@ class ConsultaCEP extends Component {
   state = {
     cepFound: false,
     cep: '',
-    cepResult: {},
-    location: {}
+    cepResult: {}
   };
 
   // componentDidMount() {
@@ -44,7 +43,7 @@ class ConsultaCEP extends Component {
       })
       .then(parsedJSON => {
         this.setState({cepResult: {...parsedJSON}, cepFound:true})
-        this.findLocation(this.state.cep);
+        // this.findLocation(this.state.cep);
       })
       .catch(error => {
         console.log(`Can't fetch data from API: ${error}`);
