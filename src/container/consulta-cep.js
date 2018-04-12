@@ -59,7 +59,7 @@ class ConsultaCEP extends Component {
           <form onSubmit = {(event) => {this.submitHandler(event)}}>
             <label className = {classes.Label} >Consultar</label>
             <label>CEP</label>
-            <input type = "text" className =  {classes.Input} placeholder = "00000-000" value = {this.state.cep} onChange = {(event) => {this.changeHandler(event)}}/>
+            <input type = "text" className =  {classes.Input} placeholder = "00000000" value = {this.state.cep} onChange = {(event) => {this.changeHandler(event)}}/>
             <button className = {classes.Button}>Buscar</button>
           </form>         
         </div>
