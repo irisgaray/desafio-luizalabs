@@ -19,7 +19,7 @@ class ConsultaCEP extends Component {
 
     let newState = {...this.state};
     newState.cep = event.target.value;
-
+    
     this.setState({cep: newState.cep}); 
   };
 
@@ -27,7 +27,7 @@ class ConsultaCEP extends Component {
 
     event.preventDefault();
     
-    let cep = this.state.cep;
+    let cep = this.state.cep.replace('-', '');
 
     if(cep.length !== 8) {
       console.log('CEP incorrect');
@@ -43,7 +43,6 @@ class ConsultaCEP extends Component {
       })
       .then(parsedJSON => {
         this.setState({cepResult: {...parsedJSON}, cepFound:true})
-        // this.findLocation(this.state.cep);
       })
       .catch(error => {
         console.log(`Can't fetch data from API: ${error}`);
@@ -59,7 +58,10 @@ class ConsultaCEP extends Component {
           <form onSubmit = {(event) => {this.submitHandler(event)}}>
             <label className = {classes.Label} >Consultar</label>
             <label>CEP</label>
-            <input type = "text" className =  {classes.Input} placeholder = "00000000" value = {this.state.cep} onChange = {(event) => {this.changeHandler(event)}}/>
+            <input type = "text" className = {classes.Input} placeholder = "Ex: 00000-000" 
+              value = {this.state.cep} onChange = {(event) => {this.changeHandler(event)}}
+              maxLength = '9' pattern = '[0-9]{5}[-]{,1}[0-9]{3}'
+            />
             <button className = {classes.Button}>Buscar</button>
           </form>         
         </div>
